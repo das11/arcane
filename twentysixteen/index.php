@@ -1,0 +1,398 @@
+<?php
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package WordPress
+ * @subpackage Twenty_Sixteen
+ * @since Twenty Sixteen 1.0
+ */
+
+?>
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title id="title">Pogody I Responsive Coming Soon Template</title>
+		<meta name="description" content="Pogody is a responsive HTML5 coming soon template by hencework." />
+		<meta name="keywords" content="Pogody, Responsive Coming Soon Template, Under Construction Template, Responsive Template, HTML5 Template, themeforest.net, Bootstrap, HTML5, Creative, Landing Page, Sass, Clean, Design, Modern, Angular js, MailChimp Subscription," />
+		<meta name="author" content="hencework" />
+		
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		
+		<!--Fonts - changed to Source Code Pro-->
+		<link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
+		
+		<!--CSS-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	
+	<body data-ng-app="contactApp">
+		<!--Preloader-->
+		<div class="preloader-it">
+			<div class="la-anim-1"></div>
+		</div>
+		<!--/Preloader-->
+		
+		<!--Container-->
+		<div class="pad-zero">
+			
+			<!--Splitlayout -->
+			<div id="splitlayout" class="splitlayout reset-layout">
+				
+				<!--Intro-->
+				<div class="intro">
+					
+					<!--Left Content Intro-->
+					<div class="side side-left">
+						
+						<!--About Nav-->
+						<div class="call-to-action about">
+								<i class="fa fa-info fa-2x"></i>	
+								<i class="fa fa-times fa-2x opacity-hide"></i>	
+								<span class="top"></span>
+								<span class="right"></span>
+								<span class="bottom"></span>
+								<span class="left"></span>
+						</div>
+						<!--/About Nav-->
+						
+						<div class="col-lg-8 col-md-9 col-sm-9 col-xs-9 align-center content-wrap">
+						
+						<!--Logo-->
+						<div class="logo align-center text-left"><img src="Arcane-Studios-Logo.png" width="180px" height="180px" alt="logo">
+						</div>
+						<!--/Logo-->
+						
+						<!--main content-->
+						<div class="main">
+							
+							<!--Content with Typing Intro-->
+							<section id="home" class="section active">
+								<div  class="preloader"></div>
+								<div class="align-center text-left">
+									<span class="small-hr animated fadeInLeft"  data-animation="fadeInLeft" data-out-animation="fadeOutLeft" data-out-animation-delay="200"></span>
+									<p class="animated fadeInLeft"  data-animation="fadeInLeft" data-out-animation="fadeOutLeft" data-out-animation-delay="300">We are busy working on something awesome.</p>
+									<div class="type-wrap text-left">
+										<h1  class="animated fadeInLeft"  data-animation="fadeInLeft" data-out-animation="fadeOutLeft" data-out-animation-delay="900"><span id="typed" ></span></h1>
+									</div>
+									
+									<div class="notify-btn main-menu">
+										<a  href="#contact" class="btn btn-default animated fadeInLeft" data-hover="Notify me" data-animation="fadeInLeft" data-animation-delay="1000" data-out-animation="fadeInLeft" data-out-animation-delay="600" data-toggle="modal" data-target="#notify-my"><span class="button-label text-left">Notify me</span><span class="arrow-wrap"><span class="arrow"></span></span></a>
+									</div>
+								</div>		
+							</section>
+							<!--/Content with Typing Intro-->
+							
+							<!--Notify Form-->
+							<section id="contact" class="section text-left">
+								<div  class="preloader"></div>	
+								<div class="main-menu">
+									<a class="close-notify black" href="#home" data-animation="fadeInDown" data-animation-delay="900" data-out-animation="fadeOutUp" data-out-animation-delay="100">
+										<div class="call-to-action">
+											<i class="fa fa-times fa-2x"></i>	
+											<span class="top"></span>
+											<span class="right"></span>
+											<span class="bottom"></span>
+											<span class="left"></span>
+										</div>
+									</a>
+								</div>
+								
+								<!--CONTENT CHANGED & <br> ADDED-->								
+								<div class="notify-wrap">
+									<h3 class="wellcome-text" data-animation="fadeInLeft" data-animation-delay="900" data-out-animation="fadeOutLeft" data-out-animation-delay="100" data-ng-bind="notify || 'hello..'">Hello..</h3>
+									<form id="notifyMe" class="contact-form" action="notify-me.php" method="post">
+										<div class="input-wrap" data-animation="fadeInLeft" data-animation-delay="100" data-out-animation="fadeOutLeft" data-out-animation-delay="900">
+											<input  data-ng-model="notify" class="col-lg-10  align-center form-control input input__field input__field--hoshi notify-input-box" name="email" placeholder="email id"  type="email">
+											<label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+										</div>	
+										<button type="submit" data-hover="Send" class="btn btn-default progress-button btn-submit " data-animation="fadeInUp" data-animation-delay="900" data-out-animation="fadeOutUp" data-out-animation-delay="1300">
+										<span><span class="arrow-wrap"><span class="arrow"></span></span></span>
+										</button>
+									</form>
+								</div>
+							</section>
+							<!--/Notify Form-->
+													
+							<div class="copyright">
+								<!-- <ul class="social-icons">
+									<li>
+										<a href="" class="social-icon">
+											<i class="fa fa-facebook"></i>
+										</a>
+									</li>
+									<li>
+										<a href="" class="social-icon">
+											<i class="fa fa-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a href="" class="social-icon">
+											<i class="fa fa-linkedin"></i>
+										</a>
+									</li>
+									<li>
+										<a href="" class="social-icon">
+											<i class="fa fa-behance"></i>
+										</a>
+									</li>
+								</ul> -->
+								<p>Pampered by <a href="http://kabirdas.xyz" style="color: #000000" target="_blank">Kabir Das</a> © 2018</p>
+							</div>
+						</div>
+						<!--/main content-->
+						
+						</div>
+					</div>
+					<!--/Left Content Intro-->
+					
+					<!--Right Content Intro-->
+					<div class="side side-right">
+						<div class="bg"></div>
+						<div class="bg disappear"></div>
+						<!--Contect Nav-->
+						<div class="call-to-action contact">
+								<i class="fa fa-envelope fa-2x"></i>
+								<i class="fa fa-times fa-2x opacity-hide"></i>
+								<span class="top"></span>
+								<span class="right"></span>
+								<span class="bottom"></span>
+								<span class="left"></span>
+						</div>
+						<!--/Contect Nav-->
+						
+						<div class="counter-content">
+							<div class="col-lg-8 col-md-9 col-sm-9 col-xs-9 align-center text-left">
+								<p class="tagline">We handcraft unique design & digital experiences to surprise the universe.</p>
+								
+								<!--Counter-->
+								<div id="countdown">
+								  <span class="days">25</span>
+								</div>
+								<span class="small-hr"></span>
+								<span class="remain-days">More Days</span>
+								<!--/Counter-->
+								
+							</div>	
+						</div>
+					<div class="trans-overlay-dark"></div>	
+					</div>
+					<!--/Right Content Intro-->
+				</div>
+				<!--/Intro-->
+				
+				<!--About Section-->
+				<div class="page page-left">
+					<div  class="page-inner full-height">
+						<div class="container align-center detail-info">
+							<div class="row">
+								<div class="col-lg-3 col-md-3 col-sm-3">
+									<h3>About</h3>
+								</div>	
+								<div class="col-lg-9 col-md-8 col-sm-8 col-xs-9">
+									<p class="tagline">We handcraft unique design & digital experiences to surprise the universe.</p>
+									<span class="small-hr"></span>
+									<p class="align-center">Something amazing is on the way !</p>
+									
+									<!--Client Slider-->
+									<!-- <div id="qualities">
+										<div class="qualities"> 
+											<div class="item" >
+												<span class="fa-qual"><i class="fa fa-cog"></i></span>
+												<span class="qual-tag">Angular js</span>
+												<span class="qual-desc">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit adipiscing elit.
+												</span>
+											</div>
+											<div class="item" >
+												<span class="fa-qual"><i class="fa fa-gavel"></i></span>
+												<span class="qual-tag">Bootstrap Sass</span>
+												<span class="qual-desc">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit adipiscing elit.
+												</span>
+											</div>
+											<div class="item" >
+												<span class="fa-qual"><i class="fa fa-sitemap"></i></span>
+												<span class="qual-tag"> CSS3</span>
+												<span class="qual-desc">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit adipiscing elit.
+												</span>
+											</div>
+											<div class="item" >
+												<span class="fa-qual"><i class="fa fa-space-shuttle"></i></span>
+												<span class="qual-tag">HTML5</span>
+												<span class="qual-desc">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit adipiscing elit.
+												</span>
+											</div>
+											<div class="item" >
+												<span class="fa-qual"><i class="fa fa-soundcloud"></i></span>
+												<span class="qual-tag"> Mailchimp</span>
+												<span class="qual-desc">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit adipiscing elit.
+												</span>
+											</div>
+											<div class="item" >
+												<span class="fa-qual"><i class="fa fa-trophy"></i></span>
+												<span class="qual-tag"> Ajax</span>
+												<span class="qual-desc">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit adipiscing elit.
+												</span>
+											</div>
+										</div>
+									</div> -->
+									<!--/Client Slider-->
+								
+								</div>	
+								<!--Team Slider-->
+								<div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-7 col-md-8 col-sm-8 col-xs-9 team-sec">
+									<p class="tagline">Our Team</p>
+									<span class="small-hr"></span>
+									<div id="team">
+										<div class="team"> 
+											<div class="item">
+												<div class="team-img-wrap">
+													<img src="img/jayanta.jpg" alt="team1">
+													<div class="team-overlay">
+														<ul class="social-icons">
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-facebook"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-twitter"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-linkedin"></i>
+																</a>
+															</li>
+															<li>
+																<a href="" class="social-icon">
+																	<i class="fa fa-behance"></i>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>	
+												<span class="name">Jayanta Haloi</span>
+												<span class="desg"> CEO											</span>
+											</div>
+											
+										
+										</div>
+									</div>
+								</div>	
+								<!--/Team Slider-->
+							</div>
+						</div>
+						<div class="trans-overlay-dark-about"></div>
+					</div>		
+				</div>
+				<!--/About Section-->
+				
+				<!--Contact Section-->
+				<div class="page page-right">
+					<div  class="page-inner full-height">
+						<div class="container align-center detail-info">
+							<div class="row">
+							<div data-ng-controller="ContactController" class="panel-body">
+								<h3 class="col-lg-12 col-xs-9" data-ng-bind="formData.inputName||'Hello..'">Hello..</h3>
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-9">
+									<form data-ng-submit="submit(contactform, $event)"  name="contactform" method="post" class="form-horizontal" role="form">
+										<div class="form-group input--hoshi" data-ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+											<div class="input-wrap">
+												<input data-ng-model="formData.inputName" type="text" class="form-control input__field input input__field--hoshi" id="inputName" name="inputName" placeholder="Name" required>
+												<label class="input__label input__label input__label--hoshi input__label--hoshi-color-1 input__label--hoshi input__label--hoshi-color-1" ></label>
+											</div>	
+										</div>
+										<div class="form-group  input--hoshi" data-ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+											<div class="input-wrap">
+												<input data-ng-model="formData.inputEmail" type="email" class="form-control input input__field input__field--hoshi" placeholder="Your Email" id="inputEmail" name="inputEmail" required>
+												<label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+											</div>	
+										</div>
+										<div class="form-group  input--hoshi" data-ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+											<div class="input-wrap">
+												<textarea data-ng-model="formData.inputMessage" class="form-control input input__field input__field--hoshi" rows="4" id="inputMessage" name="inputMessage" placeholder="message" required></textarea>
+												<label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+											</div>	
+										</div>
+										<div class="form-group">
+											<div class="align-center">
+												<button type="submit" class="btn btn-default" data-ng-disabled="submitButtonDisabled">
+													<span><span class="arrow-wrap"><span class="arrow"></span></span></span>
+												</button>
+											</div>
+										</div>
+									</form>
+									<p data-ng-class="result">{{ resultMessage }}</p>
+								</div>
+								<div class="col-lg-3 col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-5 col-xs-9">
+									<div class="align-center address-detail">
+									<p>Guwahati<br/>Assam 781023 India.</p>
+									<div class="icon col-lg-2 col-md-2 col-sm-2 col-xs-1"><i class="fa fa-phone"></i></div>
+									<div class="col-lg-10 col-md-10 col-sm-10 col-xs-11 pad-left-zero">
+										<a href="callto:8876133284" target="_blank">+91 88761 33284</a>
+									</div>
+									<div class="icon col-lg-2 col-md-2 col-sm-2 col-xs-1"><i class="fa fa-envelope"></i></div>
+									<div class="col-lg-10 col-md-10 col-sm-10 col-xs-11 pad-left-zero">
+										<a href="mailto:hello@hencework.com" target="_blank">contact@arcanestudios.com</a>
+									</div>
+									<div class="col-lg-12  pad-left-zero map">
+									<a class="" href="https://www.google.com/maps/d/viewer?mid=z_gdBE8F4CM4.kd855LF8lFPo&amp;hl=en_US" target="_blank">
+										<span class="">get direction</span><span class="go-arrow"></span>
+									</a>	
+									</div>
+								</div>
+							
+								</div>		
+								<!--Google Map-->
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7162.6655813269435!2d91.7792580242965!3d26.153289183842098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591866013303%3A0x9a010eab0d7c7802!2sGaneshguri%2C+Guwahati%2C+Assam!5e0!3m2!1sen!2sin!4v1524735264331" width="1240" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+								<!--/Google Map-->
+							</div>
+							</div>
+						</div>
+							
+						<div class="trans-overlay-dark-contact"></div>	
+            		</div>
+				</div>
+				<!--/Contact Section-->
+				
+			</div>
+			<!-- /Splitlayout -->
+		
+		</div>
+		<!-- /Container -->
+		
+		<!-- Scripts -->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/classie.js"></script>
+		<script src="js/cbpSplitLayout.js"></script>
+		<script src="js/jquery.countdown.js"></script>
+		<script src="js/typed.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers.js"></script>
+		<script src="js/owl.carousel.js"></script>
+		<script src="js/input-text.js"></script>
+		<script src="js/notifyMe.js"></script>
+		<script src="js/jquery.placeholder.js"></script>
+		<script src="js/init.js"></script>
+	</body>
+</html>
+
